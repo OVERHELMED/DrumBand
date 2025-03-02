@@ -1,0 +1,65 @@
+body {
+    background-color: #282c34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.drum-kit {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);  /* Increased size for the drums */
+    grid-gap: 30px;  /* Added more space between each drum */
+    align-items: center;
+    justify-items: center;
+}
+
+.drum {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1c40f;
+    padding: 30px;  /* Increased padding for bigger drums */
+    border-radius: 15px;  /* Slightly more rounded corners */
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);  /* Increased shadow for more depth */
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+    width: 150px;  /* Set a fixed width */
+    height: 150px;  /* Set a fixed height */
+}
+
+.drum .key-label {
+    font-size: 24px;  /* Increased font size for better visibility */
+    font-weight: bold;
+    color: #fff;
+    text-align: center;  /* Center the text */
+    margin-bottom: 10px;  /* Space between the label and key name */
+}
+
+.drum .key-name {
+    font-size: 18px;  /* Font size for the key */
+    font-weight: normal;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);  /* Dark background for visibility */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.drum:hover {
+    background-color: #f39c12;
+}
+
+.drum:active {
+    transform: scale(0.95);
+}
+
+.drum.glow {
+    box-shadow: 0 0 30px rgba(241, 196, 15, 0.7);  /* Glowing effect with larger spread */
+}
+
+.drum:focus {
+    outline: none;
+}
